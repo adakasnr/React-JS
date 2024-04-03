@@ -1,0 +1,45 @@
+react is a javascript library for building user interfaces
+we can reuse the component which are created in reactJS 
+react is created by facebook
+reactJS library comes from nodeJS
+NPM-node package Managment 
+VS Code belongs to Microsoft
+
+to check node version type node -v in terminal
+node -v or node --version => it gives node version 
+npm -v => npm version
+git --version => git hub version
+
+if we install nodeJS npm will automatically get installed
+
+#chrome devlopper tools
+Lighthouse- to check the performance of the website
+download react devlopper tool
+
+linux commands
+terminal and gitbash commands
+cls or clear => it clears all the previous commands in the terminal
+ctrl+L is shortcut for clear
+uname -a => it gives the name of the user of the system
+q=> quite
+
+most used commands
+cd(change directory)- it changes the directory
+{cd ..} => it takes use to one directory back
+{cd directoryName/} => it takes use to the forward directory
+pwd(present working directory)-  it gives the current directory
+
+mkdir(make directory) it creats new directory
+{mkdir newDirectory name}
+{rm -r} remove directory
+{touch fileName.js} => to create a file
+
+{ls} => listing files - it shows the files available in the directory
+{history} it shows all the previous commands
+{cat fileName}=> to read the content of that fileName   
+{whoami} => shows the name of the system owner
+{where is node}=>it gives location of the node files
+ {ls -a}=> hidden files
+
+#NPM basics
+npmjs.com

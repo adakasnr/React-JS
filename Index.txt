@@ -43,3 +43,9 @@ mkdir(make directory) it creats new directory
 
 #NPM basics
 npmjs.com
+
+whatever devlopper needs to do, to be done in src file 
+
+./fileName => when we enter (.) it checks from current working directory
+
+functon is called component in react when functon name is written with first alphabate as capital

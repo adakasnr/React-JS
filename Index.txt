@@ -49,3 +49,16 @@ whatever devlopper needs to do, to be done in src file
 ./fileName => when we enter (.) it checks from current working directory
 
 functon is called component in react when functon name is written with first alphabate as capital
+
+JSX stands for JavaScript XML
+it allows us to write HTML in JavaScript
+JSX Rules:
+JSX return returns one element only, for returning multiple elements we have to keep them in one div.
+If there are two siblings without parent element it will return error.
+
+in JavaScript the class is a key word, so we can not use class. Insted of the class we have to use className in JSX
+
+when we are writing JS in JSX we have to use {currly braces} when accessing a vairable
+{}=> it provides javascript enviorment in JSX
+
+

@@ -61,4 +61,9 @@ in JavaScript the class is a key word, so we can not use class. Insted of the cl
 when we are writing JS in JSX we have to use {currly braces} when accessing a vairable
 {}=> it provides javascript enviorment in JSX
 
+we can use nested component also.. App.js 18 line
+
+CSS can be writte in JSX with {{}} while writing css in in-line 
+we can also create css objects and can be placed wherever required in multiple places
+we can import CSS file to JSX 
 

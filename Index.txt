@@ -67,3 +67,5 @@ CSS can be writte in JSX with {{}} while writing css in in-line
 we can also create css objects and can be placed wherever required in multiple places
 we can import CSS file to JSX 
 
+props- properties
+

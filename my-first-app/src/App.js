@@ -4,6 +4,7 @@ const Age = () => {
   return <h2>26</h2>
 }
 
+let title = "Money heist Part2"
 
 const App = () => {
   const user = {
@@ -32,6 +33,10 @@ const App = () => {
       <Movie />
       <Movie />
       <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
+      <Movie />
       </div>
     </section>
   )
@@ -39,7 +44,7 @@ const App = () => {
 
 
 const Movie = () => {
-  return <article>
+  return <article className="each-movie">
     <ImageComponent />
     <Title />
   </article>
@@ -53,7 +58,7 @@ const ImageComponent = () => {
 };
 
 const Title = () => {
-  return <h1>Money Heist</h1>
+  return <h3 className="heading">Money Heist & {title}</h3> //here we created a variable outside component and placed here
 }
 
 

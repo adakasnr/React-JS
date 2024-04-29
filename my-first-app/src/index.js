@@ -1,6 +1,7 @@
 import React from "react"; //we are importing react from node modules
 import ReactDOM from "react-dom/client";
 import App from "./App";
+import Props from "./components/props/Parent";
 import "./index.css";
 
 // function PrintName (){

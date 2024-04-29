@@ -11,6 +11,9 @@ import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-setInterval(() => {   //it renders the functonality based on the interval
-  root.render(<App/>);
-}, 1000);             //number is timer period given in milliSec
+
+// setInterval(() => {   //it renders the functonality based on the interval
+//   root.render(<App/>);
+// }, 1000);             //number is timer period given in milliSec
+
+root.render(<App/>)      // to remove set interval, i commented the above function 

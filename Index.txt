@@ -5,6 +5,8 @@ reactJS library comes from nodeJS
 NPM-node package Managment 
 VS Code belongs to Microsoft
 
+**** Note: npm start **** to open in browser
+
 to check node version type node -v in terminal
 node -v or node --version => it gives node version 
 npm -v => npm version
@@ -26,7 +28,7 @@ q=> quite
 most used commands
 cd(change directory)- it changes the directory
 {cd ..} => it takes use to one directory back
-{cd directoryName/} => it takes use to the forward directory
+{cd directoryName/} => it takes us to the forward directory
 pwd(present working directory)-  it gives the current directory
 
 mkdir(make directory) it creats new directory
@@ -39,7 +41,7 @@ mkdir(make directory) it creats new directory
 {cat fileName}=> to read the content of that fileName   
 {whoami} => shows the name of the system owner
 {where is node}=>it gives location of the node files
- {ls -a}=> hidden files
+{ls -a}=> hidden files
 
 #NPM basics
 npmjs.com
@@ -48,7 +50,7 @@ whatever devlopper needs to do, to be done in src file
 
 ./fileName => when we enter (.) it checks from current working directory
 
-functon is called component in react when functon name is written with first alphabate as capital
+functon is called component in react, when functon name is written with first alphabate as capital
 
 JSX stands for JavaScript XML
 it allows us to write HTML in JavaScript
@@ -69,3 +71,4 @@ we can import CSS file to JSX
 
 props- properties
 
+in jsx to write comment we have to write in {/*comment line*/} braces

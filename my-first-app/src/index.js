@@ -1,7 +1,7 @@
 import React from "react"; //we are importing react from node modules
 import ReactDOM from "react-dom/client";
 import App from "./App";
-import Props from "./components/props/Parent";
+import PropsEx from "./components/props/propsEx";
 import "./index.css";
 
 // function PrintName (){
@@ -17,4 +17,4 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 //   root.render(<App/>);
 // }, 1000);             //number is timer period given in milliSec
 
-root.render(<App/>)      // to remove set interval, i commented the above function 
+root.render(<PropsEx/>)      // to remove set interval, i commented the above function 

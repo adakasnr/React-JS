@@ -10,14 +10,16 @@ let data = [
     imgURL: 'https://occ-0-4857-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmLgKmFrl2Tq5jDmIBIdp-L6_fRFsTE7KslWARHa4Yb8f8q32MOBiACOoYAGFn4k8Pc_1P7QlN-F41Btkx4q8bp2gg0yA4kCWxamkIcyRVtyIoln6PDWQVi1_IAZHe4PALj.jpg?r=326',
     discription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s'
   },
-  {title: 'Money heist Part2',
-  imgURL: 'https://occ-0-4857-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmLgKmFrl2Tq5jDmIBIdp-L6_fRFsTE7KslWARHa4Yb8f8q32MOBiACOoYAGFn4k8Pc_1P7QlN-F41Btkx4q8bp2gg0yA4kCWxamkIcyRVtyIoln6PDWQVi1_IAZHe4PALj.jpg?r=326',
-  discription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s'
-},
-{title: 'Hi Nanna',
-imgURL: 'https://occ-0-2794-2218.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSzFkseWf0J4XkPir5npa1kR0kiNZbFQYOTywLVew7xHzT9YHW9sbUcHcN63tHcbhkO1KWjXKmZL4EOCIrE9MRBDflVNE00M_8o.jpg?r=3e0',
-discription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s'
-}
+  {
+    title: 'Money heist Part2',
+    imgURL: 'https://occ-0-4857-2186.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABUmLgKmFrl2Tq5jDmIBIdp-L6_fRFsTE7KslWARHa4Yb8f8q32MOBiACOoYAGFn4k8Pc_1P7QlN-F41Btkx4q8bp2gg0yA4kCWxamkIcyRVtyIoln6PDWQVi1_IAZHe4PALj.jpg?r=326',
+    discription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s'
+  },
+  {
+    title: 'Hi Nanna',
+    imgURL: 'https://occ-0-2794-2218.1.nflxso.net/dnm/api/v6/Qs00mKCpRvrkl3HZAN5KwEL1kpE/AAAABSzFkseWf0J4XkPir5npa1kR0kiNZbFQYOTywLVew7xHzT9YHW9sbUcHcN63tHcbhkO1KWjXKmZL4EOCIrE9MRBDflVNE00M_8o.jpg?r=3e0',
+    discription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry standard dummy text ever since the 1500s'
+  }
 ]
 
 let title = "Money heist Part2"
@@ -53,19 +55,36 @@ const App = () => {
     }
   }
   let temparray = ["mango", "banana"];
-let newtempArray = data.map((eachObj) =>{
-  return (<article> 
-    <h1>{eachObj.title}</h1>
-    <img src={eachObj.imgURL} alt={eachObj.title}/>
-    <p>{eachObj.discription}</p>
-  </article>);        
-});
-console.log(newtempArray);
+  let newtempArray = data.map((eachObj) => {
+    return (<article>
+      <h1>{eachObj.title}</h1>
+      <img src={eachObj.imgURL} alt={eachObj.title} />
+      <p>{eachObj.discription}</p>
+    </article>);
+  });
+  // console.log(newtempArray);
   return (
     <section>
+      {/* {
+        data.map((eachObj) =>{
+          return (
+          <Movie 
+          title={eachObj.title} imgURL={eachObj.imgURL} discription={eachObj.discription}
+          />)
+        })
+      } */}
+      {
+        //destructuring
+        data.map((eachObj) => {
+          const { title, imgURL, discription } =eachObj
+          return (
+            <Movie title={title} imgURL={imgURL} discription={discription}/>
+          )
+        })
+      }
       {"hello"}
       {temparray}
-
+      {newtempArray}
       {/*
       <div>
         <h1 style={{color:"blue"}}>my name is {user.firstName}</h1>
@@ -100,8 +119,8 @@ const Movie = (props) => {
     <h2>{props.personName}</h2>
     {/* <ImageComponent /> */}
     {/* <Title /> */}
-    <h1>{props.title}</h1>
-    <p>{props.discription}</p>
+    <h1>{props.title || "random title"}</h1>
+    <p>{props.discription || "alternative discription for temporary"}</p>
     <img src={props.imgURL} alt="netflix show" />
 
   </article>
@@ -122,6 +141,8 @@ const Title = () => {
   )
 }
 */
+// destructuring
+// assinging the one value of the variable to new value in the object         
 
 
 export default App;

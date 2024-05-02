@@ -78,20 +78,30 @@ const data = [
 const PropsEx = () => {
     return (
         <section className="posts-container">
-            <Profile/>
-            <Profile/>
-            <Profile/>
+            {
+                data.map((profileObj) => {
+                    const { id, title, url, thumbnailUrl } = profileObj;
+                    return (
+                        <Profile
+                            key={id}
+                            id={id}
+                            title={title}
+                            url={url}
+                            thumbnailUrl={thumbnailUrl} />)
+                })
+            }
         </section>
 
     )
 }
 
-const Profile = () => {
+const Profile = (props) => {
+    const {title,thumbnailUrl,url} = props
     return (
         <article className="profile-card">
-            <img src="https://via.placeholder.com/150/24f355" alt="somthing" />
-            <h2 className="title">officia porro iure quia iusto qui ipsa ut modi</h2>
-            <a href="https://via.placeholder.com/600/24f355" className="button">Details</a>
+            <img src={thumbnailUrl} alt="somthing" />
+            <h2 className="title">{title}</h2>
+            <a href={url} className="button">Details</a>
         </article>
     )
 }

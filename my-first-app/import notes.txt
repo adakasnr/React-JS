@@ -1,0 +1,26 @@
+we used to write thousands line of code for an appplication, it creats clumsyness to check which component is in which line where we are accesing any how we have search option, creating components as a file and accesing wherever reguired will be easier to understand the code better
+export(named export)- it exports the code (export componentName)
+import- it imports the code(import componentName from fileLocation)
+
+export default- when we use default, it allows us to change the component name in the import file without error by leaving the original component file name intact
+
+=>named export syntax:
+
+export const ComponentName((props)=>{
+    return()
+})
+
+import {ComponentName} from "file Location path"
+
+=>export default syntax:
+
+const ComponentName ((props)=>{
+    return()
+})
+export default ComponentName
+
+import ComponentName from "file Location path"
+
+by using named export, we can export&import 1 or more components from the same file
+
+we can not acsess images as we do in html, here we need to do import that img file name and we have to access that name in src with js environment{}

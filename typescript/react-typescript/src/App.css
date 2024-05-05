@@ -1,0 +1,13 @@
+.button{
+  padding: 10px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  text-transform: capitalize;
+}
+
+.item-flex{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}

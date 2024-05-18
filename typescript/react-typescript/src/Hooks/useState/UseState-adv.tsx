@@ -1,3 +1,4 @@
+import { log } from "console";
 import React, { useState } from "react";
 
 const Index: React.FC = () => {
@@ -32,6 +33,29 @@ const Index: React.FC = () => {
         setShowData(!showdata);
     };
 
+    const [firstName, setFirstName] = useState("")
+    const [email, setEmail] = useState()
+    const [password, setPassword] = useState()
+
+    // const changeFirstN = (e: any) => {
+    //     setFirstName(e.target.value)
+    // }
+    // const changeE = (e: any) => {
+    //     console.log(e.target.value)
+    //     setEmail(e.target.value)
+    // }
+    // const changePassword = (e:any) => {
+    //     setPassword(e.target.vlaue)
+    // }
+    const handleInputChange = (e:any,name:any) => {
+        console.log(e.target.value,name)
+    }
+
+
+    const handleSubmit = (e: any) => {
+        e.preventDefault()
+    }
+
     return (
         <div>
             <h1>my name is {data.firstName}</h1>
@@ -47,6 +71,38 @@ const Index: React.FC = () => {
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione repellat sed adipisci rem illo cum cumque debitis autem architecto eligendi, et nostrum voluptas quaerat. Ut praesentium doloribus at illum libero.
                 </div>
             )}
+            {/*form handling*/}
+            <form onSubmit={handleSubmit}>
+                <input
+                    type="text"
+                    name="firstname"
+                    id="firstname"
+                    value={firstName}
+                    placeholder="enter your name"
+                    onChange={handleInputChange}
+                    {/*onChange={changeFirstN} */}
+                />
+                <input
+                    type="email"
+                    name="email"
+                    id="email"
+                    value={email}
+                    placeholder="enter your email"
+                    // onChange={changeE}
+                    onChange={handleInputChange}
+
+                />
+                <input
+                    type="password"
+                    name="password"
+                    id="password"
+                    value={password}
+                    placeholder="enter password"
+                    onChange={changePassword}
+                />
+                <button>submit</button>
+            </form>
+            {/*after submiting the form the page will get refresh and the details entered will be erraised, to prevent that we need to create funtion prevent default  */}
         </div>)
 }
 

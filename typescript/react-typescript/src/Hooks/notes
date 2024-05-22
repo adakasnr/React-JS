@@ -1,0 +1,16 @@
+useState
+
+useEffect: usedd to fetch API call
+
+useEffect(()=>{}) - it will execute every time when the component is render/re-render/mount
+useEffect(()=>{},[]) - it will execute only when component is mounted 
+useEffect(()=>{},[dependenies]) - it will execute only when dependenies changed 
+useEffect(()=>{return ()=>{}}[]) - it will execute only when component is Un-mounted(Ex:remove  eventListners, removing db connections)  
+
+
+
+
+
+
+syncronus javascript
+usyncrouns javascript

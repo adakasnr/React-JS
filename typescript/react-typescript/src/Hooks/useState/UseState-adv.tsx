@@ -83,9 +83,10 @@ const Index: React.FC = () => {
             text: message.text,
             id: new Date().getTime().toString()
         };
-        setList(list,)
+        setList([...list,newTodo])
         
     }
+
 
     const changeMessage = (e: any) => {
         setMessage({

@@ -3,6 +3,7 @@ import './App.css';
 import Increment from './Hooks/useState/Increment';
 import Index from './Hooks/useState/UseState-adv';
 import Final from './Hooks/useEffect/UseEffect';
+import UseEffect1 from './Hooks/useEffect/UseEffectPractice';
 
 function App() {
   return (
@@ -14,4 +15,4 @@ function App() {
   )
 }
 
-export default Final;
+export default UseEffect1;

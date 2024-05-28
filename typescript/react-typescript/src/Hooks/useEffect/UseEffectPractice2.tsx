@@ -8,18 +8,24 @@ const UseEffect2 = () => {
     const [drinksData, setDrinksData] = useState([])
     const [searchTerm, setSearchTerm] = useState("")
     const [loading, setLoading] = useState(false);
+    const [isError, setIsError] = useState({status:false,msg:''})
 
     const fetchDrink = async (apiURL: string) => {
         setLoading(true)
+        setIsError({status:false,msg:''})
         try {
             const response = await fetch(apiURL)
         const { drinks } = await response.json();
         setDrinksData(drinks)
         setLoading(false)
+        setIsError({status:false, msg:""})
+        if (!drinks){
+            throw new Error("data not found")
+        }
         } catch (error) {
             console.log(error);
             setLoading(false)
-            
+            setIsError({status:true,msg:'something went wrong'})
         }
     }
 
@@ -43,8 +49,10 @@ const UseEffect2 = () => {
                 />
             </form>
             <hr />
-            {
-                !loading && <ul className="cocktail-data">
+            {loading && !isError?.status && <h3>Loading...</h3>}
+            {isError?.status && <h3 style={{color:'red'}}>{isError.msg}</h3>}
+            {!loading && !isError?.status && ( 
+                <ul className="cocktail-data">
                 {
                     drinksData.map((eachDrink) => {
                         const { idDrink, strDrink, strDrinkThumb } = eachDrink;
@@ -58,7 +66,7 @@ const UseEffect2 = () => {
                         </li>
                     })
                 }
-            </ul>
+            </ul>)
             }
         </div>
     )

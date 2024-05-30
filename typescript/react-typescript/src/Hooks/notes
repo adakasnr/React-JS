@@ -8,7 +8,13 @@ useEffect(()=>{},[dependenies]) - it will execute only when dependenies changed
 useEffect(()=>{return ()=>{}}[]) - it will execute only when component is Un-mounted(Ex:remove  eventListners, removing db connections)  
 
 
-
+useState = state 
+useEffect = fetching || side effects
+useContext = context || global state 
+useReducer = Reducer
+useReducer is used for state management
+it is alternative to useState
+internally useReducer using useState hook only 
 
 
 

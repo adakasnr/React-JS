@@ -7,6 +7,7 @@ import UseEffect1 from './Hooks/useEffect/UseEffectPractice';
 import UseEffect2 from './Hooks/useEffect/UseEffectPractice2';
 import ParentComponent from './Hooks/useContext/UseContext';
 import ParentComponent1 from './Hooks/useContext/ParentConponent';
+import UseReducer from './Hooks/useReducer/UseReducer';
 
 function App() {
   return (
@@ -18,4 +19,4 @@ function App() {
   )
 }
 
-export default ParentComponent1;
+export default UseReducer;

@@ -1,0 +1,3 @@
+React Router Dom is used to build Single Page Applications
+Single Page Applicaton- it dynamically updates the content(it will fetch the data at a time0), when we are naviagting to other pages in the same application it allows us to go to that page without loading that page...  
+React Router version-6 available

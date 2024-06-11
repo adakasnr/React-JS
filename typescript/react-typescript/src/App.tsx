@@ -10,15 +10,42 @@ import UseEffect2 from './Hooks/useEffect/UseEffectPractice2';
 // import UseReducer from './Hooks/useReducer/UseReducer';
 import UseReducerEx from './Hooks/useReducer/UseReducerEx';
 import UseRef from './Hooks/useRef/useRef';
+import UseMemo from './Hooks/useMemo/UseMemo';
+import About from './ReactRouterDom/About';
+import Home from './ReactRouterDom/Home';
+import Contact from './ReactRouterDom/Contact';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './ReactRouterDom/Navbar';
+import Success from './ReactRouterDom/Success';
+import NotFound from './ReactRouterDom/NotFound';
+import Projects from './ReactRouterDom/NestedRoutes/Projects';
+import FeaturedProjects from './ReactRouterDom/NestedRoutes/FeaturedProjects';
+import NewProject from './ReactRouterDom/NestedRoutes/NewProjects';
 
 function App() {
   return (
-    <main className='container'>
-      <button className='button'>click me</button>
-        <Increment />
-        <Index />
-    </main>
+    // <main className='container'>
+    //   <button className='button'>click me</button>
+    //     <Increment />
+    //     <Index />
+    // </main>
+    <div className="App">
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/About' element={<About />} />
+        <Route path='/Contact' element={<Contact />} />
+        <Route path='/Success' element={<Success />} />
+        <Route path='/NestedRoutes/Projects' element={<Projects />}>
+          <Route path='featured' element={<FeaturedProjects />}/>
+          <Route path='new' element={<NewProject/>}/>
+        </Route>
+        <Route path='*' element={<NotFound />} />
+      </Routes>
+    </div>
   )
 }
 
-export default UseRef;
+// *(start)in the path, if no route matches then it shows the last route in the results 
+
+export default App;

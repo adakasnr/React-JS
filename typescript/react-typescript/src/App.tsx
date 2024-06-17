@@ -21,6 +21,8 @@ import NotFound from './ReactRouterDom/NotFound';
 import Projects from './ReactRouterDom/NestedRoutes/Projects';
 import FeaturedProjects from './ReactRouterDom/NestedRoutes/FeaturedProjects';
 import NewProject from './ReactRouterDom/NestedRoutes/NewProjects';
+import Users from './ReactRouterDom/DynamicRoutes/Users';
+import UserDetails from './ReactRouterDom/DynamicRoutes/UserDetails';
 
 function App() {
   return (
@@ -40,8 +42,10 @@ function App() {
           <Route path='featured' element={<FeaturedProjects />}/>
           <Route path='new' element={<NewProject/>}/>
         </Route>
+        <Route path='/DynamicRoutes/Users' element={<Users/>}/>
+        <Route path='/DynamicRoutes/Users/:userID' element={<UserDetails />}/>
         <Route path='*' element={<NotFound />} />
-      </Routes>
+      </Routes> 
     </div>
   )
 }

@@ -9,6 +9,7 @@ function Navbar() {
                 <NavLink to='/About'>About</NavLink>
                 <NavLink to='/Contact'>Contact</NavLink>
                 <NavLink to='/NestedRoutes/Projects'>Projects</NavLink>
+                <NavLink to='/DynamicRoutes/Users'>Users</NavLink>
             </nav>
         </div>
     )
